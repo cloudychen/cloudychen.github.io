@@ -1,17 +1,93 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=GBK">
-<title></title>
+    <title>building</title>
+    
 </head>
 <body>
-<canvas></canvas>
-<script>
-var c = document.getElementsByTagName('canvas')[0];
-var b = document.body;
-var a = c.getContext('2d');
-with(m=Math)C=cos,S=sin,P=pow;O=a.getImageData(0,0,c.height=f=W=256,f);U=O.data;D={};F=[];function J(p){p[5]=Q=0;for(j=3;j--;)if(!D[Q=(p[j]>>=2)+Q*f])D[Q]=F.push(p)}setInterval(function(){for(i=1e3;i--;){c=i%42*1.35;H=T;T=m.random();A=H*2-1;B=T*2-1;J([S(H*7)*(o=13+5/(.2+P(T*4,4)))-T*50,T*550+500,(l=C(H*7))*o,(G=l/7+.5)-T/4,G]);if(A*A+B*B<1)if(c>32){J([(o=.5/(H+.01)-H*300)*C(n=(j=c&1)?6:4)+(w=T*-f)*S(n)+j*630-390,o*S(n)-w*C(n)+999-j*350,C(B+A)*99-j*50,(P(l=1-B*B,f*6)+C(H+T)+P(C((o*H+o+(B>0?w:-w))/25),30)*l-H+2)/5,o/1e3+.7-o*w/3e5]);J([(o=H*45-20)*C(l=c/.86)+(w=T*T)*f*S(l),C(B/2)*99-w*T*60+436,o*S(l)-w*f*C(l),w*.3+.3,T*.7])}else J([(o=A*(2-T)*(80-c*2))*C(c)-(w=99-C(A)*120-C(T)*(f-c*5)+C(P(1-T,7))*50+c*2)*S(c),(B*2-C(P(T,7))+9)*50,o*S(c)+w*C(c),1-T*.7,P(1-T,9)/4])}for(i=0;i<f*f;m[i++]=f)for(l=4;l--;)U[i*4+l]=255;for(c=C(W),s=S(W),j=F.length;j--;){k=F[j],x=k[0]*c+k[2]*s+99,z=k[0]*s-k[2]*c,y=k[1]-z*.4<<8;for(i=3;i--;)if(z<m[p=y-~x+[0,1,f][i]])for(m[p]=z,l=3;l--;)U[p*4+l]=k[l+3]*f}a.putImageData(O,0,0);W+=.03},T=0)
-</script>
+    <h1>Building...</h1>
+    <div class="wrapper">
+      <div id="preloader_1">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+  </div>
 </body>
+<style>
+    body {
+        background: #ECF0F1;
+    }
+    h1 {
+        color: #aaa;
+        display: block;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 40px;
+        margin-left: -80px;
+        margin-top: -25px;
+    }
+    .wrapper {
+        width: 54px;
+        height: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -27px;
+        margin-top: 50px;
+    }
+    #preloader_1{
+        position:relative;
+    }
+    #preloader_1 span{
+        display:block;
+        bottom:0px;
+        width: 9px;
+        height: 5px;
+        background:#9b59b6;
+        position:absolute;
+        -webkit-animation: preloader_1 1.5s  infinite ease-in-out;
+        animation: preloader_1 1.5s  infinite ease-in-out;  
+    }
+
+    #preloader_1 span:nth-child(2){
+        left:11px;
+        -webkit-animation-delay: .2s;
+        animation-delay: .2s;
+    }
+    #preloader_1 span:nth-child(3){
+        left:22px;
+        -webkit-animation-delay: .4s;
+        animation-delay: .4s;
+    }
+    #preloader_1 span:nth-child(4){
+        left:33px;
+        -webkit-animation-delay: .6s;
+        animation-delay: .6s;
+    }
+    #preloader_1 span:nth-child(5){
+        left:44px;
+        -webkit-animation-delay: .8s;
+        animation-delay: .8s;
+
+    }
+    @-webkit-keyframes preloader_1 {
+        0% {height:5px;transform:translateY(0px);background:#9b59b6;}
+        25% {height:30px;transform:translateY(15px);background:#3498db;}
+        50% {height:5px;transform:translateY(0px);background:#9b59b6;}
+        100% {height:5px;transform:translateY(0px);background:#9b59b6;}
+    }
+    @keyframes preloader_1 {
+        0% {height:5px;transform:translateY(0px);background:#9b59b6;}
+        25% {height:30px;transform:translateY(15px);background:#3498db;}
+        50% {height:5px;transform:translateY(0px);background:#9b59b6;}
+        100% {height:5px;transform:translateY(0px);background:#9b59b6;}
+    }
+</style>
 </html>
 
